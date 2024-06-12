@@ -19,14 +19,18 @@ Module Module1
             Dim cislo As Integer
 
             Do
-                Console.WriteLine("Zadejte èíslo " & (i + 1) & ":")
-                Dim vstup As String = Console.ReadLine()
+                Console.WriteLine("Zadejte kladné èíslo " & (i + 1) & ":")
+                Dim vstup As String = Console.ReadLine() AndAlso cislo > 0
                 If Integer.TryParse(vstup, cislo) Then
                     cisla(i) = cislo
                     Exit Do
                 Else
-                    Console.WriteLine("Neplatný vstup. Zadejte prosím celé èíslo.")
+                    Console.WriteLine("Neplatný vstup. Zadejte prosím celé a kladné èíslo")
                 End If
+
+
+
+
             Loop
         Next
 
